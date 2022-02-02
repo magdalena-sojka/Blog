@@ -53,48 +53,45 @@
 
 
   const optArticleSelector = '.post',
-  optTitleSelector = '.post-title',
-  optTitleListSelector = '.titles';
+    optTitleSelector = '.post-title',
+    optTitleListSelector = '.titles';
 
-  function generateTitleLinks(){
+  function generateTitleLinks() {
 
-   /* [DONE] remove contents of titleList */
+    /* [DONE] remove contents of titleList */
 
-  const titleList = document.querySelector(optTitleListSelector).innerHTML = '';
+    const titleList = document.querySelector(optTitleListSelector).innerHTML = '';
 
-  /* [DONE] find all the articles and save them to variable: articles */
+    /* [DONE] find all the articles and save them to variable: articles */
 
-  const articles = document.querySelectorAll(optArticleSelector);
+    const articles = document.querySelectorAll(optArticleSelector);
 
-  let html = '';
+    let html = '';
 
-  for(let article of articles) {
-  
+    for (let article of articles) {
 
-    /* [DONE] get the article id */
+      /* [DONE] get the article id */
 
-    const articleId = article.getAttribute('id');
+      const articleId = article.getAttribute('id');
 
-    /* [DONE] find the title element, get the title from the title element */
+      /* [DONE] find the title element, get the title from the title element */
 
-    const articleTitle = article.quertySelector(optTitleSelector).innerHTML;
+      const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
-    /* [DONE] create HTML of the link */
+      /* [DONE] create HTML of the link */
 
-    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    console.log(linkHTML);
+      const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+      console.log(linkHTML);
 
-    /* [DONE] insert link into titleList */
+      /* [DONE] insert link into titleList */
 
-    html = html + linkHTML;
-  
-    console.log(html)
+      html = html + linkHTML;
+    }
+
+    titleList.innerHTML = html;
+
   }
 
-  titleList.innerHTML = html;
-  
-}
-
-generateTitleLinks();
+  generateTitleLinks();
 
 }
