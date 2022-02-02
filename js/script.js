@@ -43,15 +43,6 @@
     targetArticle.classList.add('active');
   }
 
-  const links = document.querySelectorAll('.titles a');
-
-  for (let link of links) {
-    link.addEventListener('click', titleClickHandler);
-  }
-
-
-
-
   const optArticleSelector = '.post',
     optTitleSelector = '.post-title',
     optTitleListSelector = '.titles';
@@ -60,7 +51,8 @@
 
     /* [DONE] remove contents of titleList */
 
-    const titleList = document.querySelector(optTitleListSelector).innerHTML = '';
+    const titleList = document.querySelector(optTitleListSelector);
+    titleList.innerHTML = '';
 
     /* [DONE] find all the articles and save them to variable: articles */
 
@@ -89,6 +81,13 @@
     }
 
     titleList.innerHTML = html;
+
+    const links = document.querySelectorAll('.titles a');
+    console.log(links)
+
+    for (let link of links) {
+      link.addEventListener('click', titleClickHandler);
+    }
 
   }
 
