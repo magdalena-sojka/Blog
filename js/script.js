@@ -215,7 +215,7 @@ function tagClickHandler(event) {
 function addClickListenersToTags() {
   /* find all links to tags */
 
-  const allLinksToTags = document.querySelectorAll('a.active[href^="#tag-"]');
+  const allLinksToTags = document.querySelectorAll('tagLinkHref');
   console.log(allLinksToTags);
 
   /* START LOOP: for each link */
@@ -233,7 +233,7 @@ function addClickListenersToTags() {
 addClickListenersToTags();
 
 
-const optArticleAuthorSelector = '.post-author .list';
+const optArticleAuthorSelector = '.post-author';
 
 function generateAuthors() {
 
