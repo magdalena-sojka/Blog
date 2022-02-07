@@ -198,15 +198,17 @@ function generateTags() {
 
   for (let tag in allTags) {
     /* [DONE] generate code of a link and add it to allTagsHTML */
-    allTagsHTML += tag + ' (' + allTags[tag] + ') ';
+    const tagLinkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li> ';
+
+    allTagsHTML += tagLinkHTML + ' (' + allTags[tag] + ') ';
   }
+  
   /* [DONE] END LOOP: for each tag in allTags: */
 
   /* [DONE] add html from allTags to tagList */
   tagList.innerHTML = allTagsHTML;
 
 }
-
 generateTags();
 
 

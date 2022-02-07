@@ -28,6 +28,7 @@
         ],
         "no-console": [
             "off"
-        ]
+        ],
+        "no-prototype-builtins": "off"
     }
 }
