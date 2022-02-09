@@ -147,22 +147,26 @@ body {
   font-size: 30px;
 }
 
+.tag-size-5 {
+  font-size: 36px;
+}
+
 
 /* cloud of authors */
 
-.tags li {
-  display: inline-block;
-  margin: 0 8px;
+.authors a {
+  display: block;
+  margin: 0 12px;
 }
 
-.tag-size-1 {
-  font-size: 16px;
+.author-size-1 {
+  font-size: 18px;
 }
 
-.tag-size-2 {
+.author-size-2 {
   font-size: 20px;
 }
 
-.tag-size-3 {
-  font-size: 26px;
+.author-size-3 {
+  font-size: 24px;
 }
